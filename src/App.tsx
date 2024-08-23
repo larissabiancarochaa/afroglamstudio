@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './globalStyles';
+import Navbar from './components/Navbar/Navbar';
+import Banner from './components/Banner/Banner';
+import Sobre from './components/Sobre/Sobre';
+import Servicos from './components/Servicos/Servicos';
+import Portifolio from './components/Portfolio/Portfolio';
+import Footer from './components/Footer/Footer';
+import { lightTheme, darkTheme } from './colors';
+import { globalInfo } from './models/GlobalInfoModel'; 
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const theme = isDarkMode ? darkTheme : lightTheme;
+
+  useEffect(() => {
+    document.title = globalInfo.siteTitle;
+  }, []); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={{ ...theme, toggleTheme }}>
+      <GlobalStyles />
+      <Navbar />
+      <main>
+        <Banner />
+        <Sobre />
+        <Servicos />
+        <Portifolio />
+      </main>
+      <Footer />
+    </ThemeProvider>
   );
 }
 

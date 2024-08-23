@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/afroglamstudio/static/css/main.cecbfa92.css",
+    "main.js": "/afroglamstudio/static/js/main.9950f354.js",
+    "static/media/jovem-de-tranca-nago-banner-landing-page.png": "/afroglamstudio/static/media/jovem-de-tranca-nago-banner-landing-page.ca5e8d8aca8aa42d5ae4.png",
+    "static/media/Imagem-sobre.png": "/afroglamstudio/static/media/Imagem-sobre.148cba916c8a3e5caec0.png",
+    "index.html": "/afroglamstudio/index.html",
+    "main.cecbfa92.css.map": "/afroglamstudio/static/css/main.cecbfa92.css.map",
+    "main.9950f354.js.map": "/afroglamstudio/static/js/main.9950f354.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cecbfa92.css",
+    "static/js/main.9950f354.js"
+  ]
+}
